@@ -32,7 +32,27 @@ connectDB();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://127.0.0.1:5173', process.env.CLIENT_URL].filter(Boolean),
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like mobile apps, curl, health checks)
+    if (!origin) return callback(null, true);
+
+    const allowedOrigins = [
+      'http://localhost:5173',
+      'http://127.0.0.1:5173',
+      process.env.CLIENT_URL
+    ].filter(Boolean);
+
+    if (
+      allowedOrigins.includes(origin) ||
+      origin.endsWith('.vercel.app') ||
+      origin.endsWith('.onrender.com') ||
+      process.env.NODE_ENV !== 'production'
+    ) {
+      return callback(null, true);
+    }
+
+    return callback(null, true);
+  },
   credentials: true
 }));
 app.use(express.json());
@@ -49,6 +69,18 @@ app.use('/uploads', express.static(uploadDir));
 // Serve initial assets if requested from backend
 const assetDir = path.join(__dirname, '../../Assets');
 app.use('/assets', express.static(assetDir));
+app.use('/assets', express.static(path.join(uploadDir, 'initial')));
+
+// Root endpoint
+app.get('/', (req, res) => {
+  res.status(200).json({
+    name: 'Tikhori Foods API',
+    status: 'online',
+    health: '/api/health',
+    products: '/api/products',
+    timestamp: new Date().toISOString()
+  });
+});
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
@@ -70,19 +102,11 @@ app.use('/api/content', contentRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/settings', settingRoutes);
 
-// In Production: Serve compiled frontend from client/dist if present
-const clientDist = path.join(__dirname, '../../client/dist');
-app.use(express.static(clientDist));
-
-app.get('*', (req, res, next) => {
-  if (req.path.startsWith('/api') || req.path.startsWith('/uploads') || req.path.startsWith('/assets')) {
-    return next();
-  }
-  const indexPath = path.join(clientDist, 'index.html');
-  res.sendFile(indexPath, (err) => {
-    if (err) {
-      res.status(404).send('Tikhori Foods API is active. Frontend build not present.');
-    }
+// Fallback 404 for unknown endpoints
+app.all('*', (req, res) => {
+  res.status(404).json({
+    success: false,
+    message: `Route not found: ${req.method} ${req.originalUrl}`
   });
 });
 
