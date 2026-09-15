@@ -270,16 +270,16 @@ const seedDatabase = async () => {
             hi: 'शुद्ध। जैविक। प्रामाणिक। एक सार्थक उद्देश्य के साथ।'
           },
           description: {
-            en: 'Tikhori Foods brings you single-origin, stemless, and unadulterated spices from India’s heartlands while championing rural women entrepreneurs and grassroots micro-enterprises.',
-            hi: 'टिखोरी फूड्स आपके लिए लाता है भारत की मिट्टी से उपजी शुद्ध, डंठल-रहित और रसायन-मुक्त मसाले, साथ ही ग्रामीण महिला उद्यमियों को सशक्त बनाकर उनके सपनों को नई उड़ान देता है।'
+            en: 'Tikhori Foods brings you single-origin, stemless, and unadulterated spices from India’s heartlands, crafted with traditional stone-ground milling and zero synthetic additives.',
+            hi: 'टिखोरी फूड्स आपके लिए लाता है भारत की मिट्टी से उपजी शुद्ध, डंठल-रहित और रसायन-मुक्त मसाले, जो पारंपरिक धीमी पिसाई और शून्य कृत्रिम मिलावट के साथ तैयार किए जाते हैं।'
           },
           ctaPrimary: {
             en: 'Explore Our Spices',
             hi: 'हमारे मसाले देखें'
           },
           ctaSecondary: {
-            en: 'Our Mission',
-            hi: 'हमारा उद्देश्य'
+            en: 'Our Heritage',
+            hi: 'हमारी विरासत'
           },
           heroImage: '/assets/products/product-1.png'
         }
@@ -296,8 +296,8 @@ const seedDatabase = async () => {
             hi: 'टिखोरी फूड्स ही क्यों?'
           },
           subtitle: {
-            en: 'Every spoonful is grounded in authenticity, uncompromising quality, and grassroots empowerment.',
-            hi: 'हर चम्मच में है प्रामाणिकता, शुद्धता और ग्रामीण भारत के स्वावलंबन का विश्वास।'
+            en: 'Every spoonful is grounded in authenticity, uncompromising quality, and traditional stone-ground milling.',
+            hi: 'हर चम्मच में है प्रामाणिकता, शुद्धता और पारंपरिक धीमी पिसाई का विश्वास।'
           },
           points: [
             {
@@ -337,48 +337,52 @@ const seedDatabase = async () => {
               }
             },
             {
-              id: 'purpose',
-              icon: 'HeartHandshake',
-              title: { en: 'Crafted With Purpose', hi: 'सार्थक उद्देश्य' },
+              id: 'stone-ground',
+              icon: 'Award',
+              title: { en: 'Traditional Stone Grinding', hi: 'पारंपरिक धीमी पिसाई' },
               description: {
-                en: 'Connecting premium kitchen essentials with meaningful rural livelihoods and women empowerment.',
-                hi: 'रसोई के शुद्ध स्वाद को ग्रामीण महिलाओं की आत्मनिर्भरता और गरिमा से जोड़ना।'
+                en: 'Slow, low-temperature stone milling to lock in volatile oils and authentic natural aroma.',
+                hi: 'धीमी गति से पारंपरिक पिसाई ताकि मसालों के प्राकृतिक तेल, रंग और खुशबू सुरक्षित रहें।'
               }
             }
           ]
         }
       },
       {
-        section: 'empowerment',
+        section: 'purityPromise',
         data: {
           tagline: {
-            en: 'Social Impact',
-            hi: 'सामाजिक प्रभाव'
+            en: 'Our Purity Promise',
+            hi: 'हमारी शुद्धता का संकल्प'
           },
           title: {
-            en: 'Empowering Women. Strengthening Rural Businesses.',
-            hi: 'महिला सशक्तिकरण। ग्रामीण उद्यमों की मजबूती।'
+            en: 'Four Pillars of Uncompromising Purity',
+            hi: 'शुद्धता और गुणवत्ता के चार मजबूत आधार'
           },
           heading: {
-            en: 'More Than Spices. A Purpose to Empower.',
-            hi: 'सिर्फ मसाले नहीं, बदलाव की एक पहल।'
+            en: 'Crafted Clean. Ground Pure. Packed Fresh.',
+            hi: 'स्वच्छ उत्पादन। शुद्ध पिसाई। ताजी सीलबंद पैकेजिंग।'
           },
           story: {
-            en: 'Tikhori Foods believes that meaningful economic growth begins at the grassroots level. By partnering with women entrepreneurs and rural micro-enterprises, we help establish sustainable processing clusters, provide fair earnings, and foster financial independence for rural households.',
-            hi: 'टिखोरी फूड्स का मानना है कि वास्तविक आर्थिक उन्नति की शुरुआत ज़मीनी स्तर से होती है। ग्रामीण महिला उद्यमियों और छोटे व्यवसायों के साथ जुड़कर, हम टिकाऊ रोजगार, उचित आय और महिलाओं की आर्थिक स्वतंत्रता को बढ़ावा देते हैं।'
+            en: 'Tikhori Foods is dedicated to delivering the absolute finest spices directly from India\'s fertile agricultural belts. Every single spice is meticulously sourced, manually destemmed, cold-stone ground, and sealed fresh with zero chemicals or additives.',
+            hi: 'टिखोरी फूड्स भारत के चुनिंदा खेतों से सीधे उच्च गुणवत्ता वाले शुद्ध मसाले आप तक पहुँचाता है। डंठल-रहित मिर्च, बिना किसी रसायन या मिलावट के, पारंपरिक धीमी पिसाई से तैयार की जाती है।'
           },
           pillars: [
             {
-              title: { en: 'Economic Independence', hi: 'आर्थिक आत्मनिर्भरता' },
-              description: { en: 'Fair pricing and direct market access for women-led processing collectives.', hi: 'महिला स्वयं-सहायता समूहों के लिए उचित मूल्य और सीधा बाजार।' }
+              title: { en: '100% Organic Sourcing', hi: '१००% जैविक स्रोत' },
+              description: { en: 'Grown naturally in certified chemical-free soil without synthetic pesticides or chemical fertilizers.', hi: 'बिना किसी कीटनाशक या रासायनिक खाद के उपजाऊ प्राकृतिक मिट्टी में उगाया गया।' }
             },
             {
-              title: { en: 'Grassroots Entrepreneurship', hi: 'ग्रामीण उद्यमिता' },
-              description: { en: 'Encouraging rural small businesses through equipment, grading training, and clean storage.', hi: 'उपकरण, गुणवत्ता प्रशिक्षण और सुरक्षित भंडारण के माध्यम से ग्रामीण व्यापार को बढ़ावा।' }
+              title: { en: 'Manual Destemming', hi: 'डंठल-रहित सफाई' },
+              description: { en: 'Every red chilli is manually destemmed to eliminate seed bitterness and maximize vibrant natural redness.', hi: 'हाथ से डंठल अलग करने की प्रक्रिया, जिससे मिलता है गहरा स्वाभाविक लाल रंग और बेहतरीन स्वाद।' }
             },
             {
-              title: { en: 'Dignity Through Work', hi: 'काम से सम्मान' },
-              description: { en: 'Honoring the traditional wisdom of rural women with modern opportunities.', hi: 'ग्रामीण महिलाओं के पारंपरिक कौशल को आधुनिक अवसरों से जोड़कर आत्मनिर्भर बनाना।' }
+              title: { en: 'Slow Stone Grinding', hi: 'पारंपरिक धीमी पिसाई' },
+              description: { en: 'Slow milling at low temperatures prevents oil evaporation, locking in natural fragrance and essential oils.', hi: 'कम तापमान पर धीमी पिसाई ताकि मसालों की सुगंध और प्राकृतिक तेल पूरी तरह सुरक्षित रहें।' }
+            },
+            {
+              title: { en: 'Zero Synthetic Additives', hi: 'शून्य कृत्रिम मिलावट' },
+              description: { en: 'Strict zero-adulteration guarantee: no artificial colors, Sudan red, synthetic flavors, or fillers.', hi: 'कोई कृत्रिम रंग, रासायनिक फ्लेवर, स्टार्च या मिलावट नहीं।' }
             }
           ]
         }
@@ -435,16 +439,16 @@ const seedDatabase = async () => {
             hi: 'टिखोरी फूड्स के बारे में'
           },
           title: {
-            en: 'Authentic Spices. Clean Ingredients. Social Mission.',
-            hi: 'प्रामाणिक मसाले। शुद्ध सामग्री। सामाजिक संकल्प।'
+            en: 'Authentic Spices. Clean Ingredients. Traditional Craft.',
+            hi: 'प्रामाणिक मसाले। शुद्ध सामग्री। पारंपरिक कारीगरी।'
           },
           story: {
-            en: 'Tikhori Foods was founded with a single mission: to return Indian cooking to its purest roots while creating meaningful livelihoods for rural women. We reject shortcuts, artificial enhancements, and chemical additives in favor of authentic aroma, rich flavors, and ethical practices.',
-            hi: 'टिखोरी फूड्स की शुरुआत एक स्पष्ट उद्देश्य के साथ हुई: भारतीय रसोई को उसकी शुद्धतम जड़ों से जोड़ना और साथ ही ग्रामीण महिलाओं के लिए सम्मानजनक आजीविका का निर्माण करना। हम रसायनों और कृत्रिम मिलावट को नकारते हुए प्रामाणिक स्वाद को प्राथमिकता देते हैं।'
+            en: 'Tikhori Foods was founded with a single mission: to return Indian cooking to its purest roots with unadulterated spices. We reject shortcuts, artificial enhancements, and chemical additives in favor of authentic aroma, rich natural flavors, and traditional stone-grinding practices.',
+            hi: 'टिखोरी फूड्स की शुरुआत एक स्पष्ट उद्देश्य के साथ हुई: भारतीय रसोई को उसकी शुद्धतम जड़ों से जोड़ना। हम रसायनों और कृत्रिम मिलावट को नकारते हुए प्रामाणिक स्वाद और पारंपरिक पिसाई को प्राथमिकता देते हैं।'
           },
           philosophy: {
-            en: 'We believe good food starts with honest farming, careful processing, and community respect. Every blend we craft reflects patience, purity, and our profound love for India’s spice heritage.',
-            hi: 'हमारा मानना है कि अच्छा भोजन ईमानदार खेती, पारदर्शी प्रसंस्करण और समाज के प्रति सम्मान से शुरू होता है।'
+            en: 'We believe good food starts with honest farming, careful processing, and time-honored milling. Every blend we craft reflects patience, purity, and our profound love for India’s spice heritage.',
+            hi: 'हमारा मानना है कि अच्छा भोजन ईमानदार खेती, पारदर्शी प्रसंस्करण और पारंपरिक पिसाई से शुरू होता है।'
           }
         }
       },
@@ -452,8 +456,8 @@ const seedDatabase = async () => {
         section: 'footer',
         data: {
           brandStatement: {
-            en: 'Tikhori Foods is dedicated to pure, organic Indian spices crafted with traditional integrity while fostering grassroots women entrepreneurship.',
-            hi: 'टिखोरी फूड्स शुद्ध और जैविक भारतीय मसालों के साथ-साथ ग्रामीण महिला उद्यमियों के सशक्तिकरण के लिए समर्पित है।'
+            en: 'Tikhori Foods is dedicated to pure, organic Indian spices crafted with traditional slow stone-grinding integrity, zero chemicals, and no artificial colours.',
+            hi: 'टिखोरी फूड्स शुद्ध और जैविक भारतीय मसालों, पारंपरिक धीमी पिसाई और बिना किसी रसायन या कृत्रिम रंग की शुद्धता के लिए समर्पित है।'
           },
           copyright: {
             en: '© 2026 Tikhori Foods. All rights reserved.',
@@ -468,58 +472,9 @@ const seedDatabase = async () => {
     }
     console.log(`[Seed]: Seeded ${cmsContents.length} CMS content sections.`);
 
-    // 4. Seed Initial Women Entrepreneur Profiles
-    const entrepreneursData = [
-      {
-        name: 'Sunita Patil',
-        location: 'Satara, Maharashtra',
-        photo: '',
-        businessName: {
-          en: 'Maa Annapurna Spice Collective',
-          hi: 'मां अन्नपूर्णा मसाला समूह'
-        },
-        story: {
-          en: 'Sunita started her small-scale spice grading micro-enterprise with Tikhori Foods. Today, she leads a group of 8 women from her village, ensuring fair wages and economic self-sufficiency.',
-          hi: 'सुनीता जी ने टिखोरी फूड्स के साथ जुड़कर मसाला सफाई और ग्रेडिंग का छोटा व्यवसाय शुरू किया। आज वे अपने गांव की ८ महिलाओं के समूह का नेतृत्व करती हैं।'
-        },
-        journey: {
-          en: 'From home-maker to recognized rural entrepreneur managing raw chilli sorting and grading.',
-          hi: 'गृहिणी से एक सम्मानित ग्रामीण उद्यमी बनने तक का प्रेरणादायी सफर।'
-        },
-        quote: {
-          en: 'Earning our own income gave us a voice in our families and pride in our work.',
-          hi: 'अपनी कमाई ने हमें परिवार में निर्णय लेने का अधिकार और काम में गर्व दिया है।'
-        },
-        isActive: true,
-        sortOrder: 1
-      },
-      {
-        name: 'Savita Meena',
-        location: 'Sikar, Rajasthan',
-        photo: '',
-        businessName: {
-          en: 'Shree Kripa Agri Processing',
-          hi: 'श्री कृपा कृषि प्रसंस्करण'
-        },
-        story: {
-          en: 'Partnering with Tikhori Foods allowed Savita to build a solar drying station for organic coriander, training fellow village women in clean post-harvest handling.',
-          hi: 'टिखोरी फूड्स के सहयोग से सविता जी ने जैविक धनिया सुखाने के लिए सोलर ड्रायर यूनिट लगाई और गांव की अन्य महिलाओं को प्रशिक्षण दिया।'
-        },
-        journey: {
-          en: 'Pioneered clean spice drying techniques in her block.',
-          hi: 'अपने क्षेत्र में स्वच्छ मसाला प्रसंस्करण की नई शुरुआत की।'
-        },
-        quote: {
-          en: 'Quality spices bring taste to homes, and clean work brings dignity to our lives.',
-          hi: 'शुद्ध मसाले घरों में स्वाद लाते हैं, और सम्मानजनक काम हमारे जीवन में खुशहाली लाता है।'
-        },
-        isActive: true,
-        sortOrder: 2
-      }
-    ];
-
-    await Entrepreneur.insertMany(entrepreneursData);
-    console.log(`[Seed]: Seeded ${entrepreneursData.length} women entrepreneur profiles.`);
+    // 4. Clear Entrepreneur records (no longer used)
+    await Entrepreneur.deleteMany({});
+    console.log('[Seed]: Entrepreneur collection cleared.');
 
     // 5. Seed Promotional Banner
     const bannerData = {
@@ -528,8 +483,8 @@ const seedDatabase = async () => {
         hi: 'सच्ची शुद्धता का प्रामाणिक स्वाद'
       },
       subtitle: {
-        en: '100% Organic • Chemical Free • Supporting Rural Women',
-        hi: '१००% जैविक • रसायन मुक्त • ग्रामीण महिलाओं का सहयोग'
+        en: '100% Organic • Chemical Free • Traditional Stone-Ground',
+        hi: '१००% जैविक • रसायन मुक्त • पारंपरिक धीमी पिसाई'
       },
       description: {
         en: 'Experience the distinction of slow-ground, stemless Indian spices crafted without artificial colours or synthetic preservatives.',
@@ -562,8 +517,8 @@ const seedDatabase = async () => {
       contactEmail: 'contact@tikhorifoods.com',
       contactPhone: '+91 98765 43210',
       address: {
-        en: 'Plot 42, Spice Industrial Zone, Rural Enterprise Corridor, India',
-        hi: 'प्लॉट 42, मसाला औद्योगिक क्षेत्र, ग्रामीण उद्यमिता कॉरिडोर, भारत'
+        en: 'Plot 42, Spice Industrial Zone, Food Processing Corridor, India',
+        hi: 'प्लॉट 42, मसाला औद्योगिक क्षेत्र, खाद्य प्रसंस्करण कॉरिडोर, भारत'
       },
       businessHours: {
         en: 'Monday to Saturday: 9:00 AM - 6:00 PM IST',
