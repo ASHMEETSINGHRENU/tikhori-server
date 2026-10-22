@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import path from 'path';
+import fs from 'fs';
 import { fileURLToPath } from 'url';
 
 import Product from './models/Product.js';
@@ -12,10 +13,12 @@ import Enquiry from './models/Enquiry.js';
 import Subscriber from './models/Subscriber.js';
 import { seedDatabase } from './seed.js';
 
-dotenv.config();
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// Load .env from server directory or current working directory
+dotenv.config({ path: path.join(__dirname, '.env') });
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -224,6 +227,18 @@ app.post('/api/subscribers', async (req, res) => {
     res.status(400).json({ error: err.message });
   }
 });
+
+// Serve compiled client in production (Full-stack Render Web Service)
+const clientDistPath = path.join(__dirname, '../client/dist');
+if (fs.existsSync(clientDistPath)) {
+  app.use(express.static(clientDistPath));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api') || req.path.startsWith('/assets')) {
+      return next();
+    }
+    res.sendFile(path.join(clientDistPath, 'index.html'));
+  });
+}
 
 // Start Server
 app.listen(PORT, () => {

@@ -1,11 +1,16 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import Product from './models/Product.js';
 import Stockist from './models/Stockist.js';
 import Order from './models/Order.js';
 import Subscriber from './models/Subscriber.js';
 import Enquiry from './models/Enquiry.js';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+dotenv.config({ path: path.join(__dirname, '.env') });
 dotenv.config();
 
 const INITIAL_PRODUCTS = [
@@ -279,6 +284,6 @@ export async function seedDatabase() {
   }
 }
 
-if (process.argv[1].endsWith('seed.js')) {
+if (process.argv[1] && process.argv[1].endsWith('seed.js')) {
   seedDatabase().then(() => process.exit(0));
 }
