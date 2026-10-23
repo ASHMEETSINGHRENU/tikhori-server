@@ -44,6 +44,29 @@ mongoose.connect(MONGODB_URI)
 
 // --- API ROUTES ---
 
+// Root / Welcome Endpoint
+app.get('/', (req, res, next) => {
+  const clientDistPath = path.join(__dirname, '../client/dist');
+  if (fs.existsSync(clientDistPath)) {
+    return next();
+  }
+  res.json({
+    status: 'online',
+    brand: 'Tikhori Foods',
+    message: '🌿 Tikhori Foods Backend API Server is running successfully!',
+    database: 'Connected to MongoDB Atlas',
+    version: '2.0.0',
+    endpoints: {
+      health: '/api/health',
+      products: '/api/products',
+      orders: '/api/orders',
+      stockists: '/api/stockists',
+      enquiries: '/api/enquiries',
+      subscribers: '/api/subscribers'
+    }
+  });
+});
+
 // Health Check
 app.get('/api/health', (req, res) => {
   res.json({
